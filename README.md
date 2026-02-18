@@ -211,7 +211,7 @@ Portfolio content is centralized in `src/data/portfolioData.ts`:
 **Prakash Reddy Pasham**
 - Email: prakash.reddy9766@gmail.com
 - Phone: +1 (716) 390-8830
-- Location: Buffalo, NY
+- Location: Dallas, Texas , USA
 - LinkedIn: [prakash-reddy-pasham](https://www.linkedin.com/in/prakash-reddy-pasham)
 - GitHub: [prakashreddy975](https://github.com/prakashreddy975)
 

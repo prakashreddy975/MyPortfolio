@@ -6,7 +6,7 @@ export const personalInfo = {
   tagline: 'Results-driven Software Engineer specializing in scalable backend systems and AI/ML solutions',
   email: 'prakash.reddy9766@gmail.com',
   phone: '+1 (716) 390-8830',
-  location: 'Buffalo, NY',
+  location: 'Dallas, Texas, USA',
   linkedin: 'https://www.linkedin.com/in/prakash-reddy-pasham',
   github: 'https://github.com/prakashreddy975',
   instagram: 'https://www.instagram.com/prakash_reddy_9710/',
@@ -29,54 +29,108 @@ export const experiences: Experience[] = [
       'Collaborated with cross-functional teams to troubleshoot production issues, enhance feature rollouts, and streamline CI/CD pipelines using tools like Git, JIRA, and internal deployment frameworks, resulting in faster delivery and reduced deployment errors.',
     ],
   },
+  {
+    company: 'Indian Institute of Technology Tirupati',
+    position: 'Research Assistant',
+    location: 'Tirupati, India',
+    period: 'Jan 2021 – Jun 2022',
+    highlights: [
+      'Built a UNet++ deep learning model using TensorFlow and Keras for multi-class satellite image segmentation across 7 land-use categories, achieving 90.13% Dice score.',
+      
+      'Engineered a geospatial preprocessing pipeline with Rasterio to process 4-band GeoTIFF datasets, generating 16,302 overlapping 100×100 labeled training samples.',
+      
+      'Optimized model architecture with dense skip connections and deep supervision, improving feature fusion and stabilizing convergence over 25 training epochs.',
+      
+      'Addressed severe class imbalance (majority vs minority pixel distribution) using LDAM, Dice, and IoU-based loss functions, improving minority-class segmentation reliability.',
+      
+      'Designed an end-to-end ML workflow covering data ingestion, preprocessing, model training (batch size 64, Adam optimizer), evaluation, and inference deployment for real-world remote sensing analysis.',
+      
+      'Collaborated with 2+ research mentors and domain experts to validate experimental results and document findings for applied satellite image analysis.'
+    ],
+  }
 ];
 
 export const education: Education[] = [
   {
     institution: 'University at Buffalo, The State University of New York',
     degree: 'Master of Professional Studies in Data Science and Applications',
-    location: 'Buffalo, NY',
+    location: 'Buffalo, New York',
     period: 'Dec 2025',
     gpa: '3.96/4.0',
-    courses: ['Machine Learning', 'Database Management System', 'Data Mining'],
+    courses: ['Machine Learning', 'Database Management System', 'Data Mining','AI','Deep Learning','Data Visualization','Data Science Capstone'],
   },
   {
     institution: 'Indian Institute of Technology Tirupati (IITTP)',
     degree: 'Bachelor of Technology in Electrical Engineering',
     location: 'Tirupati, India',
     period: 'Jul 2022',
+    gpa: '3.24/4.0',
     courses: ['Data Structures', 'Machine Learning for Image Processing', 'AI', 'Deep Learning', 'Signals and Systems'],
   },
 ];
 
 export const skills: Skill[] = [
   {
-    category: 'Languages',
-    items: ['Python', 'C', 'C++', 'C#', 'Java', 'JavaScript', 'SQL', 'R', 'ReactJS'],
+    category: 'Languages & Frameworks ',
+    items: ['Python', 'Java', 'JavaScript', 'C', 'C++','SQL', 'R', 'ReactJS','Spring Boot', 'Node.js','Postman API'],
   },
   {
-    category: 'Backend',
-    items: ['Spring Boot', 'REST APIs', 'Microservices', 'Node.js'],
+    category: 'Backend & Systems ',
+    items: ['Linux', 'Distributed Systems',"REST API’s", 'Microservices', 'OOP','Github','Jenkins','FastAPI'],
   },
   {
-    category: 'Databases',
-    items: ['MySQL', 'PostgreSQL', 'MongoDB', 'Cassandra'],
+    category: 'Databases & Cloud ',
+    items: ['MySQL', 'PostgreSQL', 'Cassandra', 'Redis', 'MongoDB', 'Kafka', 'AWS (EC2, S3)', 'Docker'],
   },
   {
-    category: 'AI & Machine Learning',
-    items: ['TensorFlow', 'PyTorch', 'Keras', 'Scikit-learn', 'Pandas'],
+    category: 'Observability & Tools ',
+    items: ['Prometheus', 'Grafana', 'OpenTelemetry', 'Datadog', 'JUnit', 'Mockito', 'Git'],
   },
   {
-    category: 'Cloud & DevOps',
-    items: ['AWS (EC2, S3)', 'Docker', 'Apache Kafka', 'Git', 'JIRA', 'CI/CD'],
+    category: 'Security & Cryptography',
+    items: ['AES-256', 'JWT', 'Secure Pipelines'],
   },
   {
-    category: 'Tools and Platforms',
-    items: ['Git', 'Linux', 'Oracle APEX', 'JIRA', 'Agile Methodologies', 'Tableau'],
+    category: 'Machine Learning & AI',
+    items: ['PyTorch', 'TensorFlow', 'Scikit-learn','RAG',"LLM’s",'Hugging Face','Generative AI', 'NLP'],
+  },
+  {
+    category: 'Frontend & UI',
+    items: ['React', 'HTML5', 'CSS3', 'JavaScript', 'UI Integration', 'Streamlit'],
+  },
+  {
+    category: 'Methodologies',
+    items: ['Agile', 'Scrum', 'Code Reviews', 'End-to-End Ownership','SDLC'],
   },
 ];
 
 export const projects: Project[] = [
+  {
+    id: 'ai-cyber-threat-detector',
+    title: 'AI-Enhanced Cybersecurity Threat Detector + SOC Copilot',
+    description: 'Real-time intrusion detection platform with live alert streaming, persistent storage, and a RAG-based SOC assistant grounded in cybersecurity runbooks',
+    technologies: [
+      'Python',
+      'FastAPI',
+      'WebSockets',
+      'scikit-learn (Random Forest)',
+      'MySQL',
+      'SQLAlchemy',
+      'React (Vite)',
+      'Chart.js',
+      'Docker',
+      'RAG (Runbooks + Retrieval)'
+    ],
+    highlights: [
+      'Built a binary IDS pipeline using Random Forest with probability-based risk scoring (LOW/MEDIUM/HIGH) and threshold tuning (ROC-AUC ~0.91)',
+      'Developed a FastAPI backend with REST + WebSocket broadcasting to stream real-time alerts to a SOC-style dashboard (~100ms inference latency)',
+      'Persisted alerts to MySQL (Dockerized) using SQLAlchemy for auditability and historical analytics endpoints (/alerts, /metrics)',
+      'Implemented a RAG-based SOC Copilot grounded in curated Markdown runbooks with similarity thresholding + refusal logic to prevent hallucinations'
+    ],
+    period: 'Dec 2025 – Present',
+    github: 'https://github.com/prakashreddy975/ai-cyber-threat-detector_Binary'
+  },
+  
   {
     id: 'ecommerce-fraud',
     title: 'E-Commerce Fraud Detection System',
@@ -88,7 +142,7 @@ export const projects: Project[] = [
       'Implemented fraud service that automatically flags suspicious activity',
       'Enhanced system resilience and security',
     ],
-    period: 'Jan 2025 – Present',
+    period: 'Aug 2025 – Dec 2025',
     github: 'https://github.com/prakashreddy975/MyEcommerce' 
   },
   {
@@ -106,11 +160,11 @@ export const projects: Project[] = [
     github: 'https://github.com/prakashreddy975/MediAid' 
   },
   {
-    "id": "workforceanalytics",
-    "title": "Workforce Analytics",
-    "description": "Analyzed a comprehensive employee dataset to identify key trends in performance, retention, and workforce composition, providing actionable insights for organizational decision-making.",
-    "technologies": ["Python", "SQL", "SQLite", "Pandas", "Seaborn", "Matplotlib", "Streamlit"],
-    "highlights": [
+    id: "workforceanalytics",
+    title: "Workforce Analytics",
+    description: "Analyzed a comprehensive employee dataset to identify key trends in performance, retention, and workforce composition, providing actionable insights for organizational decision-making.",
+    technologies: ["Python", "SQL", "SQLite", "Pandas", "Seaborn", "Matplotlib", "Streamlit"],
+    highlights: [
       "Performed data wrangling, including imputing missing values with the median and handling outliers using the IQR method.",
       "Engineered new features such as 'Age Group' and 'Bonus Percentage' to enhance analytical depth.",
       "Designed and implemented a relational database in SQLite, normalizing the schema to 3NF to ensure data integrity.",
@@ -144,20 +198,8 @@ export const projects: Project[] = [
       'Achieved 15% reduction in data latency and 10% improvement in network efficiency',
     ],
     period: 'Jul 2021 – Jul 2022',
-  },
-  {
-    id: 'satellite-classification',
-    title: 'Satellite Image Classification Using Deep Learning',
-    description: 'Deep learning pipeline to automate classification of satellite imagery for land use analysis',
-    technologies: ['TensorFlow', 'Keras', 'Deep Learning', 'Computer Vision', 'Python'],
-    highlights: [
-      'Designed and trained Unet++ semantic segmentation model',
-      'Implemented robust image preprocessing and data augmentation',
-      'Achieved 92% classification accuracy',
-      'Provided scalable tool for automated environmental monitoring',
-    ],
-    period: 'May 2021 – Aug 2021',
-  },
+  }
+  
 ];
 
 export const blogPosts: BlogPost[] = [
