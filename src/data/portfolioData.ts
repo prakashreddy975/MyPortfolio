@@ -1,4 +1,5 @@
 import { Project, Experience, Education, Skill, BlogPost } from '../types/portfolio';
+import profilePicture from '../assets/Profile_picture.png';
 
 export const personalInfo = {
   name: 'Prakash Reddy Pasham',
@@ -11,8 +12,7 @@ export const personalInfo = {
   linkedin: 'https://www.linkedin.com/in/prakash-reddy-pasham',
   github: 'https://github.com/prakashreddy975',
   instagram: 'https://www.instagram.com/prakash_reddy_9710/',
-  profileImage:
-    'src/assets/Profile_picture.png',
+  profileImage: profilePicture,
   openToRoles: [
     'Software Engineer',
     'Backend Engineer',
