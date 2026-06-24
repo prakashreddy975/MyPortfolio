@@ -125,7 +125,7 @@ const Contact = () => {
             Get in Touch
           </h1>
           <p className={`text-xl max-w-3xl mx-auto ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-            Have a question or want to work together? Feel free to reach out!
+            Recruiters and hiring managers, I'm open to Backend, Full-Stack, AI/ML, and Data roles. Based in Buffalo, NY. I typically respond within 24 hours.
           </p>
         </motion.div>
 

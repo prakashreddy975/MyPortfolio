@@ -2,26 +2,61 @@ import { Project, Experience, Education, Skill, BlogPost } from '../types/portfo
 
 export const personalInfo = {
   name: 'Prakash Reddy Pasham',
-  title: 'Software Engineer and Data Science Student',
-  tagline: 'Results-driven Software Engineer specializing in scalable backend systems and AI/ML solutions',
-  email: 'prakash.reddy9766@gmail.com',
+  title: 'Software Engineer · Full-Stack · AI/ML · Data',
+  tagline:
+    'Building scalable backend systems, full-stack products, and intelligent data solutions that drive measurable impact',
+  email: 'pashamprakash1718@gmail.com',
   phone: '+1 (716) 390-8830',
-  location: 'Dallas, Texas, USA',
+  location: 'Buffalo, New York, USA',
   linkedin: 'https://www.linkedin.com/in/prakash-reddy-pasham',
   github: 'https://github.com/prakashreddy975',
   instagram: 'https://www.instagram.com/prakash_reddy_9710/',
-  profileImage: 'https://public.youware.com/users-website-assets/prod/1ab70d67-1670-40cb-a993-a6a044f87701/47a7a7691d33463e871b1c6579ef2071',
-  summary: 'Results-driven Software Engineer with 2 years of experience designing and scaling high-performance backend systems for 14M+ users. Expert in Java, Spring Boot, and Kafka, specializing in event-driven microservices architecture and system optimization that has cut infrastructure costs by 30%. Passionate about leveraging AI/ML to solve complex problems and deliver impactful software solutions.',
+  profileImage:
+    'src/assets/Profile_picture.png',
+  openToRoles: [
+    'Software Engineer',
+    'Backend Engineer',
+    'Full-Stack Engineer',
+    'AI/ML Engineer',
+    'Data Engineer',
+    'Data Scientist',
+  ],
+  summary:
+    'Engineer with 3+ years of experience delivering production-grade backend systems, full-stack applications, AI/ML platforms, and data pipelines. At Paytm, scaled event-driven microservices for 14M+ users; at EY, built RAG-powered AI applications serving 100K+ daily requests. Strong in Java, Python, Spring Boot, React, Kafka, SQL/NoSQL, and modern ML (PyTorch, TensorFlow, LLMs). M.S. in Data Science & Applications, University at Buffalo (GPA 3.96). Open to Backend, Full-Stack, AI/ML, and Data roles.',
 };
 
+export const impactMetrics = [
+  { value: '3+', label: 'Years Experience' },
+  { value: '14M+', label: 'Users Impacted' },
+  { value: '100K+', label: 'Daily AI Requests' },
+  { value: '10+', label: 'ML Models Productionized' },
+];
+
 export const experiences: Experience[] = [
+  {
+    company: 'EY',
+    position: 'Software Development Engineer – AI',
+    location: 'United States',
+    period: 'May 2025 – Present',
+    logo: 'https://1000logos.net/wp-content/uploads/2020/04/ernst-young-ey-logo.png',
+    highlights: [
+      'Designed and built scalable AI-powered applications serving 100K+ daily requests with sub-100ms latency and 99.99% availability.',
+      'Architected intelligent retrieval and search platforms leveraging RAG, vector search, and LLM technologies to provide real-time, context-aware responses across 50M+ documents.',
+      'Developed feature engineering and model serving infrastructure enabling scalable machine learning and analytics workflows.',
+      'Implemented automated CI/CD pipelines using Docker, Kubernetes, and GitHub Actions, reducing deployment time from days to hours.',
+      'Built comprehensive observability solutions with Prometheus and Grafana, improving system health monitoring and reducing production incidents by 35%.',
+      'Collaborated with cross-functional teams to productionize and optimize 10+ machine learning models, improving performance through batching, caching, and optimization strategies.',
+      'Designed microservices-based and event-driven architectures using Kafka, enabling scalable, asynchronous processing and improved system reliability.'
+      ],
+  },
   {
     company: 'Paytm (One97 Communications Ltd)',
     position: 'Software Engineer',
     location: 'Noida, India',
     period: 'Jun 2022 – Jun 2024',
+    logo: 'https://1000logos.net/wp-content/uploads/2021/03/Paytm_Logo.jpg',
     highlights: [
-      'Improved system performance and efficiency by integrating Aerospike caching, optimizing Kafka consumers, and enabling asynchronous processing — reducing infrastructure costs by 30% and increasing throughput.',
+      'Improved system performance and efficiency by integrating Aerospike caching, optimizing Kafka consumers, and enabling asynchronous processing with reducing infrastructure costs by 30% and increasing throughput.',
       'Developed and maintained Spring Boot microservices for billing and consent management, achieving 97.6% API success rate and enabling automated bill-fetch workflows for 14M+ users via event-driven architecture.',
       'Engineered secure, scalable systems by implementing AES-256 encryption across credit card and mobile (postpaid/prepaid) data pipelines (MySQL, Cassandra, Kafka), securing data for 10M+ users in alignment with regulatory standards.',
       'Built reusable infrastructure components, including a centralized encrypted logging module and fault-tolerant scripts that encrypted and migrated 15M+ legacy records with zero downtime.',
@@ -31,9 +66,10 @@ export const experiences: Experience[] = [
   },
   {
     company: 'Indian Institute of Technology Tirupati',
-    position: 'Research Assistant',
+    position: 'Intern',
     location: 'Tirupati, India',
-    period: 'Jan 2021 – Jun 2022',
+    period: 'Apr 2021 – Oct 2021',
+    logo: 'https://iittp.ac.in/assets/img/logo/logo.svg',
     highlights: [
       'Built a UNet++ deep learning model using TensorFlow and Keras for multi-class satellite image segmentation across 7 land-use categories, achieving 90.13% Dice score.',
       
@@ -54,7 +90,7 @@ export const education: Education[] = [
   {
     institution: 'University at Buffalo, The State University of New York',
     degree: 'Master of Professional Studies in Data Science and Applications',
-    location: 'Buffalo, New York',
+    location: 'Buffalo, New York, USA',
     period: 'Dec 2025',
     gpa: '3.96/4.0',
     courses: ['Machine Learning', 'Database Management System', 'Data Mining','AI','Deep Learning','Data Visualization','Data Science Capstone'],
@@ -71,19 +107,19 @@ export const education: Education[] = [
 
 export const skills: Skill[] = [
   {
-    category: 'Languages & Frameworks ',
+    category: 'Languages & Frameworks',
     items: ['Python', 'Java', 'JavaScript', 'C', 'C++','SQL', 'R', 'ReactJS','Spring Boot', 'Node.js','Postman API'],
   },
   {
-    category: 'Backend & Systems ',
+    category: 'Backend & Systems',
     items: ['Linux', 'Distributed Systems',"REST API’s", 'Microservices', 'OOP','Github','Jenkins','FastAPI'],
   },
   {
-    category: 'Databases & Cloud ',
+    category: 'Databases & Cloud',
     items: ['MySQL', 'PostgreSQL', 'Cassandra', 'Redis', 'MongoDB', 'Kafka', 'AWS (EC2, S3)', 'Docker'],
   },
   {
-    category: 'Observability & Tools ',
+    category: 'Observability & Tools',
     items: ['Prometheus', 'Grafana', 'OpenTelemetry', 'Datadog', 'JUnit', 'Mockito', 'Git'],
   },
   {
@@ -204,6 +240,80 @@ export const projects: Project[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'rag-llms-production',
+    title: 'Building Production RAG Systems with LLMs',
+    excerpt:
+      'A practical guide to Retrieval-Augmented Generation — how to ground LLMs in real data, reduce hallucinations, and ship AI applications that scale.',
+    date: '2026-05-18',
+    readTime: '4 min read',
+    tags: ['RAG', 'LLM', 'AI', 'NLP', 'Vector Search'],
+    blog_content: `
+      <p>Large Language Models (LLMs) are remarkably capable  but on their own, they can hallucinate facts, miss domain-specific context, and go stale the moment their training data ends. <strong>Retrieval-Augmented Generation (RAG)</strong> solves this by giving the model access to a curated knowledge base at query time, so answers are grounded in real documents rather than pure guesswork.</p>
+      <br>
+      <p>While building AI-powered search and copilot systems including platforms indexing <strong>50M+ documents</strong> and SOC assistants grounded in security runbooks .I've seen RAG become the default pattern for production LLM applications. This post breaks down how RAG works, when to use it, and what it takes to ship it reliably.</p>
+      <br>
+
+      <h3><strong>What Is RAG?</strong></h3>
+      <p>RAG combines two ideas: <strong>retrieval</strong> (finding relevant information from a knowledge source) and <strong>generation</strong> (using an LLM to produce a natural-language response). Instead of asking the LLM to answer from memory alone, you first retrieve the most relevant chunks of text, then pass them as context in the prompt.</p>
+      <p>Think of it as an open-book exam. The LLM still does the reasoning and writing, but it has the right reference material in front of it.</p>
+      <br>
+
+      <h3><strong>The RAG Pipeline: Step by Step</strong></h3>
+      <h4>1. Ingestion & Chunking</h4>
+      <p>Raw documents like PDFs, Markdown runbooks, medical records, internal wikis  are parsed, cleaned, and split into smaller <strong>chunks</strong> (typically 256–512 tokens). Good chunking balances context completeness with retrieval precision. Overlapping chunks help preserve continuity across section boundaries.</p>
+      <br>
+
+      <h4>2. Embedding & Vector Storage</h4>
+      <p>Each chunk is converted into a dense vector using an <strong>embedding model</strong> (e.g., Sentence Transformers, OpenAI embeddings, or domain-tuned models). These vectors are stored in a <strong>vector database</strong> or search index that supports similarity search enabling you to find "semantically close" content even when exact keywords don't match.</p>
+      <br>
+
+      <h4>3. Retrieval at Query Time</h4>
+      <p>When a user asks a question, the query is embedded and compared against stored vectors. The top-<em>k</em> most similar chunks are retrieved. Techniques like <strong>hybrid search</strong> (combining vector similarity with keyword/BM25 scoring) and <strong>re-ranking</strong> can significantly improve relevance for enterprise use cases.</p>
+      <br>
+
+      <h4>4. Augmented Generation</h4>
+      <p>The retrieved chunks are injected into the LLM prompt as context, along with instructions like: <em>"Answer only using the provided context. If the answer is not in the context, say you don't know."</em> This grounding step is what makes RAG trustworthy enough for production assistants, search, and copilots.</p>
+      <br>
+
+      <h3><strong>Why RAG Over Fine-Tuning?</strong></h3>
+      <p>Fine-tuning teaches a model new behavior or style, but it's expensive to update and doesn't easily handle large, changing knowledge bases. RAG is often the better choice when:</p>
+      <ul>
+        <li><strong>Knowledge changes frequently</strong> — update the index, not the model.</li>
+        <li><strong>You need citations</strong> — retrieved chunks map directly to source documents.</li>
+        <li><strong>Domain data is proprietary</strong> — keep sensitive data in your own infrastructure.</li>
+        <li><strong>You want to reduce hallucinations</strong> — the model is constrained to provided context.</li>
+      </ul>
+      <br>
+
+      <h3><strong>Production Lessons: What Actually Matters</strong></h3>
+      <h4>Similarity Thresholds & Refusal Logic</h4>
+      <p>Not every query has a good match in your knowledge base. Setting a <strong>similarity threshold</strong> and explicit refusal logic returning "I don't have enough information" when retrieval scores are low prevents the model from inventing answers. This was critical in building a SOC copilot grounded in cybersecurity runbooks.</p>
+      <br>
+
+      <h4>Latency & Scale</h4>
+      <p>Production RAG systems must balance retrieval quality with speed. Caching frequent queries, batching embedding calls, and optimizing vector index parameters help maintain sub-second retrieval even across tens of millions of documents.</p>
+      <br>
+
+      <h4>Evaluation Is Non-Negotiable</h4>
+      <p>Measure retrieval precision (are the right chunks returned?) and generation quality (is the answer faithful to context?). Without evaluation, RAG systems feel impressive in demos and fail quietly in production.</p>
+      <br>
+
+      <h3><strong>A Minimal Architecture</strong></h3>
+      <p>Most production RAG stacks follow a familiar shape:</p>
+      <ol>
+        <li><strong>Document store</strong> — S3, blob storage, or a database holding raw files.</li>
+        <li><strong>Embedding service</strong> — generates vectors for chunks and queries.</li>
+        <li><strong>Vector index</strong> — FAISS, Pinecone, Weaviate, Elasticsearch with dense vectors, or pgvector.</li>
+        <li><strong>LLM API</strong> — GPT-4, Claude, Llama, or a self-hosted model via vLLM/TGI.</li>
+        <li><strong>Orchestration layer</strong> — FastAPI, LangChain, LlamaIndex, or custom Python glue code.</li>
+      </ol>
+      <br>
+
+      <h3><strong>Conclusion</strong></h3>
+      <p>RAG is not a silver bullet it introduces complexity around chunking, indexing, and evaluation but it remains the most practical way to build <strong>trustworthy, updatable LLM applications</strong> on top of real-world data. Whether you're building an enterprise search platform, a domain-specific copilot, or a document Q&A system, mastering the retrieval-generation loop is essential for any engineer working at the intersection of AI and production software.</p>
+    `,
+  },
+  {
     id: 'microservices-kafka',
     title: 'Building Event-Driven Microservices with Kafka',
     excerpt: 'Learn how to design and implement scalable event-driven microservices using Apache Kafka for high-throughput systems.',
@@ -217,7 +327,7 @@ export const blogPosts: BlogPost[] = [
     <p>During my time as a Software Engineer at Paytm, I had the firsthand experience of developing and scaling systems for over 14 million users. This journey taught me the immense power of EDA. In this post, I'll walk you through the core concepts and how you can implement them using two powerhouse technologies: <strong>Spring Boot</strong> and <strong>Apache Kafka</strong>.</p>
     <br>
     <h3><strong>What is Event-Driven Architecture?</strong></h3>
-    <p>At its core, EDA is a model where services communicate by producing and consuming <strong>events</strong>. An event is a significant change in state—an order placed, a payment processed, a user profile updated.</p>
+    <p>At its core, EDA is a model where services communicate by producing and consuming <strong>events</strong>. An event is a significant change in state like an order placed, a payment processed, a user profile updated.</p>
     <p>Instead of one service directly calling another (a synchronous, tightly-coupled approach), services in an EDA are decoupled. A service produces an event and sends it to an event broker, like Kafka. Other services can then subscribe to these events and react accordingly, all without knowing anything about the producer. This decoupling is the magic ingredient.</p>
     <br>
 

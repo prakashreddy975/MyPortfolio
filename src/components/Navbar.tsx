@@ -3,8 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useThemeStore } from '../store/themeStore';
-// --- ADD THIS IMPORT ---
-import resumePDF from '../assets/prakash_reddy_resume.pdf';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,8 +33,8 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? isDark
-            ? 'bg-gray-900/95 backdrop-blur-md shadow-lg'
-            : 'bg-white/95 backdrop-blur-md shadow-lg'
+            ? 'bg-slate-950/90 backdrop-blur-md shadow-lg shadow-black/10 border-b border-slate-800'
+            : 'bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-200'
           : 'bg-transparent'
       }`}
     >
@@ -46,11 +44,11 @@ const Navbar = () => {
           <Link to="/">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className={`text-2xl font-bold ${
-                isDark ? 'text-white' : 'text-gray-900'
+              className={`text-xl font-bold tracking-tight ${
+                isDark ? 'text-white' : 'text-slate-900'
               }`}
             >
-              PR
+              <span className="text-blue-500">PR</span>
             </motion.div>
           </Link>
 
@@ -83,22 +81,19 @@ const Navbar = () => {
               </Link>
             ))}
 
-            {/* --- ADDED DESKTOP RESUME BUTTON --- */}
-            <motion.a
-              href={resumePDF}
-              download="Prakash_Reddy_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className={`px-4 py-2 rounded-lg font-semibold transition-colors duration-300 ${
-                isDark
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
-                  : 'bg-blue-500 text-white hover:bg-blue-600'
-              }`}
-            >
-              Resume
-            </motion.a>
+            <Link to="/contact">
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`px-4 py-2 rounded-lg font-semibold transition-colors duration-300 ${
+                  isDark
+                    ? 'bg-blue-600 text-white hover:bg-blue-700'
+                    : 'bg-blue-600 text-white hover:bg-blue-700'
+                }`}
+              >
+                Hire Me
+              </motion.span>
+            </Link>
 
             {/* Theme Toggle */}
             <motion.button
@@ -178,21 +173,18 @@ const Navbar = () => {
               </motion.div>
             </Link>
           ))}
-          {/* --- ADDED MOBILE RESUME LINK --- */}
-          <a
-            href={resumePDF}
-            download="Prakash_Reddy_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className={`block py-2 px-4 rounded-lg font-semibold text-center mt-2 ${
-              isDark
-                ? 'bg-blue-600 text-white hover:bg-blue-700'
-                : 'bg-blue-500 text-white hover:bg-blue-600'
-            }`}
-          >
-            Download Resume
-          </a>
+          <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+            <motion.div
+              whileTap={{ scale: 0.98 }}
+              className={`block py-2 px-4 rounded-lg font-semibold text-center mt-2 ${
+                isDark
+                  ? 'bg-blue-600 text-white hover:bg-blue-700'
+                  : 'bg-blue-600 text-white hover:bg-blue-700'
+              }`}
+            >
+              Hire Me
+            </motion.div>
+          </Link>
         </div>
       </motion.div>
     </motion.nav>

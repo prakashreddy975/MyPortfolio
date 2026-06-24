@@ -36,7 +36,7 @@ const Projects = () => {
             Projects
           </h1>
           <p className={`text-xl max-w-3xl mx-auto ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-            A showcase of my technical projects and contributions
+            Selected work across backend systems, AI/ML, and data analytics
           </p>
         </motion.div>
 

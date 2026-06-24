@@ -1,5 +1,5 @@
 import React,{ useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useThemeStore } from './store/themeStore';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -8,6 +8,16 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const { isDark } = useThemeStore();
@@ -24,6 +34,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className={`min-h-screen ${isDark ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
         <Navbar />
         <main className="flex-grow">

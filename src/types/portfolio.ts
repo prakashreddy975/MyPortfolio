@@ -16,6 +16,7 @@ export interface Project {
     location: string;
     period: string;
     highlights: string[];
+    logo?: string;
   }
   
   export interface Education {
